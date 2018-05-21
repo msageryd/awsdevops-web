@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/sagas.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/widgets</a> sagas.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { call, put, takeLatest } from '<span class="cstat-no" title="statement not covered" >redux-saga/effects'</span>
+import { handleApiErrors } from '../lib/api-errors'
+import {
+  WIDGET_CREATING,
+  WIDGET_REQUESTING,
+} from './constants'
+&nbsp;
+import {
+  widgetCreateSuccess,
+  widgetCreateError,
+  widgetRequestSuccess,
+  widgetRequestError,
+} from './actions'
+&nbsp;
+const widgetsUrl = <span class="cstat-no" title="statement not covered" >`${process.env.REACT_APP_API_URL}/api/Clients`</span>
+&nbsp;
+// Nice little helper to deal with the response
+// converting it to json, and handling errors
+function <span class="fstat-no" title="function not covered" >handleRequest </span>(request) {
+<span class="cstat-no" title="statement not covered" >  return request</span>
+    .then(handleApiErrors)
+    .th<span class="fstat-no" title="function not covered" >en</span>(response <span class="cstat-no" title="statement not covered" >=&gt; response.json</span>())
+    .th<span class="fstat-no" title="function not covered" >en</span>(json <span class="cstat-no" title="statement not covered" >=&gt; js</span>on)
+    .cat<span class="fstat-no" title="function not covered" >ch</span>((error)<span class="cstat-no" title="statement not covered" > =&gt; { throw e</span>rror })
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >widgetCreateApi </span>(client, widget) {
+  const url = <span class="cstat-no" title="statement not covered" >`${widgetsUrl}/${client.id}/widgets`</span>
+  const request = <span class="cstat-no" title="statement not covered" >fetch(url, {</span>
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // passes our token as an "Authorization" header in
+      // every POST request.
+      Authorization: client.token.id || undefined, // will throw an error if no login
+    },
+    body: JSON.stringify(widget),
+  })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return handleRequest(request)</span>
+}
+&nbsp;
+function* <span class="fstat-no" title="function not covered" >widgetCreateFlow </span>(action) {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const { client, widget } = <span class="cstat-no" title="statement not covered" >action</span>
+    const createdWidget = <span class="cstat-no" title="statement not covered" >yield call(widgetCreateApi, client, widget)</span>
+    // creates the action with the format of
+    // {
+    //   type: WIDGET_CREATE_SUCCESS,
+    //   widget,
+    // }
+    // Which we could do inline here, but again, consistency
+<span class="cstat-no" title="statement not covered" >    yield put(widgetCreateSuccess(createdWidget))</span>
+  } catch (error) {
+    // same with error
+<span class="cstat-no" title="statement not covered" >    yield put(widgetCreateError(error))</span>
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >widgetRequestApi </span>(client) {
+  const url = <span class="cstat-no" title="statement not covered" >`${widgetsUrl}/${client.id}/widgets`</span>
+  const request = <span class="cstat-no" title="statement not covered" >fetch(url, {</span>
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      // passe our token as an "Authorization" header
+      Authorization: client.token.id || undefined,
+    },
+  })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return handleRequest(request)</span>
+}
+&nbsp;
+function* <span class="fstat-no" title="function not covered" >widgetRequestFlow </span>(action) {
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    // grab the client from our action
+    const { client } = <span class="cstat-no" title="statement not covered" >action</span>
+    // call to our widgetRequestApi function with the client
+    const widgets = <span class="cstat-no" title="statement not covered" >yield call(widgetRequestApi, client)</span>
+    // dispatch the action with our widgets!
+<span class="cstat-no" title="statement not covered" >    yield put(widgetRequestSuccess(widgets))</span>
+  } catch (error) {
+<span class="cstat-no" title="statement not covered" >    yield put(widgetRequestError(error))</span>
+  }
+}
+&nbsp;
+function* <span class="fstat-no" title="function not covered" >widgetsWatcher </span>() {
+  // each of the below RECEIVES the action from the .. action
+<span class="cstat-no" title="statement not covered" >  yield [</span>
+    takeLatest(WIDGET_CREATING, widgetCreateFlow),
+    takeLatest(WIDGET_REQUESTING, widgetRequestFlow),
+  ]
+}
+&nbsp;
+export default widgetsWatcher
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 22:22:39 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

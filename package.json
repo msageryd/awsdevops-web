@@ -9,7 +9,11 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "react-scripts": "0.9.0"
+    "nyc": "^11.8.0",
+    "react-scripts": "0.9.0",
+    "enzyme": "2.7.1",
+    "react-addons-test-utils": "15.4.2",
+    "react-test-renderer": "15.4.2"
   },
   "dependencies": {
     "react": "^15.4.2",
@@ -24,7 +28,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "_eject": "react-scripts eject",
+    "coverage": "react-scripts test --env=jsdom --coverage --collectCoverageFrom='[\"src/**/*.{js,jsx}\"]'; rm -rf .nyc_output; mv coverage .nyc_output",
+    "coverage:check": "nyc check-coverage --statements 90 --functions 90 --functions 90 --lines 90",
+    "coverage:report": "open ./.nyc_output/lcov-report/index.html"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -34,30 +41,26 @@
       "document": true,
       "fetch": true
     },
+    "env": {
+      "jest": true
+    },
     "rules": {
-      "semi": [
+      "semi": ["error", "never"],
+      "space-before-function-paren": ["error", "always"],
+      "jsx-quotes": ["error", "prefer-double"],
+      "no-unused-vars": [
         "error",
-        "never"
+        {
+          "varsIgnorePattern": "React"
+        }
       ],
-      "space-before-function-paren": [
-        "error",
-        "always"
-      ],
-      "jsx-quotes": [
-        "error",
-        "prefer-double"
-      ],
-      "no-unused-vars": ["error", { "varsIgnorePattern": "React" }],
       "no-shadow": 0,
       "react/jsx-uses-vars": [2],
       "react/require-default-props": [0],
       "react/jsx-filename-extension": [
         1,
         {
-          "extensions": [
-            ".js",
-            ".jsx"
-          ]
+          "extensions": [".js", ".jsx"]
         }
       ]
     }
